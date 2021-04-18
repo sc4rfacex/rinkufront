@@ -1,0 +1,35 @@
+<div id="main-wrapper" data-layout="vertical" data-navbarbg="skin5" data-sidebartype="full" data-sidebar-position="absolute" data-header-position="absolute" data-boxed-layout="full">
+
+    <!-- Header -->
+    <app-header></app-header>
+
+    <!-- Left Sidebar -->
+    <app-sidebar></app-sidebar>
+
+    <div class="page-wrapper">
+        <div class="container-fluid">
+
+            <!-- Breadcrumbs -->
+            <app-breadcrumbs></app-breadcrumbs>
+
+            <!-- Sistema de rutas -->
+            <!-- Contenido de las paginas -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body">
+                          
+                            <router-outlet></router-outlet>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <!-- Footer -->
+        <footer class="footer"> © 2021 Rinku Cinema
+        </footer>
+    </div>
+
+</div>
