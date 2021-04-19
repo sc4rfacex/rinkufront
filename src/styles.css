@@ -1,1 +1,49 @@
-/* You can add global styles to this file, and also import other style files */
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.table{
+  width: 95%;
+}
+
+.mat-icon{
+  height:15px !important;
+  width:15px !important;
+  font-size:19px !important;
+}
+
+.btn-warning{
+  height: 28px !important;
+  width: 10px !important;
+}
+.btn-danger{
+  height: 28px !important;
+  width: 10px !important;
+}
+
+/* Styles for tab labels */
+.mat-tab-label {
+  min-width: 25px !important;
+  padding: 5px;
+  background-color: transparent;
+  color: rgb(0, 0, 0);
+  font-weight: 500;
+  font-size: 15px;
+  
+}
+
+/* Styles for the active tab label */
+.mat-tab-label.mat-tab-label-active {
+  min-width: 25px !important;
+  padding: 5px;
+  background-color: transparent;
+  color: rgb(15, 15, 15);
+  font-weight: 500;
+  font-size: 15px;
+  
+  
+}
+
+/* Styles for the ink bar */
+.mat-ink-bar {
+  background-color: green;
+}

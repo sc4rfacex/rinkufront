@@ -1,1 +1,67 @@
-<p>empleados works!</p>
+<div class="card-body">
+
+    <mat-tab-group mat-stretch-tabs>
+            <mat-tab label="Lista de Empleados">
+                <ng-template matTabContent>
+
+                    <div class="card-body">
+                        <!-- Busqueda -->
+                        <div class="form-group">
+                            <input type="text" 
+                                    class="form-control" 
+                                    placeholder="Buscar..."
+                                    name="inputBusqueda"
+                                    [(ngModel)]="busqueda">
+                        </div>
+
+                        <h4 class="card-title">Lista de Empleados</h4>
+                        <div class="table-responsive">
+                            <table class="table user-table">
+                                <thead>
+                                    
+                                    <tr class="text-center">
+                                        <th wid class="border-top-0"># Empleado</th>
+                                        <th class="border-top-0">Nombre Empleado</th>
+                                        <th class="border-top-0">Rol</th>
+                                        <th class="border-top-0">Tipo</th>
+                                        <th class="border-top-0">Acciones</th>
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+
+                                    <tr class="text-center" *ngFor="let empleado of empleados">
+                                        <td>{{empleado.numeroEmpleado}}</td>
+                                        <td>{{empleado.nombreEmpleado}}</td>
+                                        <td>
+                                            <span class="label label-danger">{{empleado.rolEmpleado | rolEmpleado}}</span>
+                                        </td>
+                                        <td>
+                                            <span class="label label-info">{{empleado.tipoEmpleado | tipoEmpleado}}</span>
+                                        </td>
+                                        
+                                        <td class="row">
+                                            <div class="btn-group" role="group" aria-label="Basic example">
+                                                <mat-icon class="btn btn-warning">edit</mat-icon>
+                                                <mat-icon class="btn btn-danger">delete</mat-icon>
+
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+
+                </ng-template>
+            </mat-tab>
+            <mat-tab label="Agregar Empleado">
+                <ng-template matTabContent>
+
+                    <app-formulario-empleado></app-formulario-empleado>
+                </ng-template>
+            </mat-tab>
+    </mat-tab-group>
+</div>

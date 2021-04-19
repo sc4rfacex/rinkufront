@@ -1,0 +1,73 @@
+<div class="card-body">
+    
+    <form class="form-horizontal form-material mx-2"
+            [formGroup] = "formularioRegistro"
+            (ngSubmit) = "insertarEmpleado()">
+
+        <!-- Numero del empleado -->
+        <div class="form-group">
+            <label class="col-md-6 mb-0"># Empleado</label>
+            <div class="col-md-6">
+                <input type="text" 
+                        placeholder="Numero del empleado" 
+                        class="form-control ps-0 form-control-line"
+                        formControlName= "numeroEmpleado"
+                        [class.is-invalid] = "numeroEmpleadoNoValido">
+                        <small *ngIf="numeroEmpleadoNoValido"> Ingrese un numero de empleado de 8 digitos</small>
+            </div>
+        </div>
+
+        <!-- Nombre del empleado -->
+        <div class="form-group">
+            <label class="col-md-6 mb-0">Nombre</label>
+            <div class="col-md-6">
+                <input type="text" 
+                        placeholder="Nombre del empleado" 
+                        class="form-control ps-0 form-control-line"
+                        formControlName="nombre">
+            </div>
+        </div>
+
+        <!-- Rol del empleado -->
+        <div class="form-group">
+            <label class="col-sm-12">Selecciona rol del empleado</label>
+            <div class="col-sm-12 border-bottom">
+                <select class="form-select shadow-none ps-0 border-0 form-control-line"
+                        formControlName="rol">
+                    <option> Seleccione...</option>
+                    <option value=1>Chofer</option>
+                    <option value=2>Cargador</option>
+                    <option value=3>Auxiliar</option>
+                </select>
+            </div>
+            <br>
+
+            <!-- Tipo empleado -->
+            <label> Tipo de empleado: </label>
+            <div class="form-group">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" 
+                            type="radio" 
+                            formControlName="tipo" 
+                            id="tipoInterno" 
+                            value="1">
+                    <label class="form-check-label" for="tipoInterno"> Interno </label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" 
+                            type="radio" 
+                            formControlName="tipo" 
+                            id="tipoExterno" 
+                            value="2">
+                    <label class="form-check-label" for="tipoExterno"> Externo </label>
+                  </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-sm-12 d-flex">
+                <button class="btn btn-success mx-auto mx-md-0 text-white"> Guardar </button>
+            </div>
+        </div>
+    </form>
+</div>

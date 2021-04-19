@@ -15,9 +15,10 @@
                         [routerLink]="menu.url" 
                         aria-expanded="false"
                         routerLinkActive="active"
+                        [routerLinkActiveOptions]="['router-link-active']"
                         [routerLinkActiveOptions]="{exact:true}">
                         <i [class]="menu.icono"></i>
-                        <span class="hide-menu"> {{ menu.titulo}}</span>
+                        <span class="hide-menu"> {{ menu.titulo }} </span>
                     </a>
                 </li>
             </ul>
